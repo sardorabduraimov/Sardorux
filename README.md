@@ -16,8 +16,12 @@ Ushbu loyiha endi dizayn spetsifikatsiyadan tashqari **ishlaydigan UI prototip**
 - Yo'nalishlar bo'yicha horizontal bar chart
 - Hududlar bo'yicha vizual bar-map
 
+## Deploy yo'riqnomasi
+- `DEPLOYMENT_OPTIONS_UZ.md` faylida Cloudflare Pages, Vercel, Netlify, GitHub Pages va local production-like deploy bosqichlari berilgan.
+
 ## Fayllar
 - `dashboard.html` — UI struktura
 - `dashboard.css` — theme, grid, responsive stil
 - `dashboard.js` — data, filter logic, chart render
 - `dashboard_design_spec_uz.md` — to'liq UX/UI spetsifikatsiya
+- `DEPLOYMENT_OPTIONS_UZ.md` — productionga chiqarish yo'li
