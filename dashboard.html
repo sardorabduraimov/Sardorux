@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yagona Analitik Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js" defer></script>
+    <script src="dashboard.js" defer></script>
+  </head>
+  <body data-theme="light">
+    <header class="topbar card">
+      <div>
+        <h1>Fuqarolar murojaatlari va davlat xizmatlari</h1>
+        <p>Yagona analitik dashboard</p>
+      </div>
+      <div class="topbar-actions">
+        <span id="lastUpdate">Yangilandi: -</span>
+        <button id="themeToggle" class="btn">🌙 Dark</button>
+      </div>
+    </header>
+
+    <section class="filters card">
+      <label>Sanadan
+        <input id="dateFrom" type="date" />
+      </label>
+      <label>Sanagacha
+        <input id="dateTo" type="date" />
+      </label>
+      <label>Hudud
+        <select id="regionFilter"></select>
+      </label>
+      <label>Xizmat turi
+        <select id="serviceFilter"></select>
+      </label>
+      <button id="resetBtn" class="btn btn-ghost">Reset</button>
+    </section>
+
+    <main class="grid">
+      <section class="kpis">
+        <article class="card kpi"><h3>Jami murojaatlar</h3><p id="kpiTotal">0</p></article>
+        <article class="card kpi"><h3>Muddatda bajarilgan</h3><p id="kpiOnTime">0</p></article>
+        <article class="card kpi"><h3>Kechikayotgan</h3><p id="kpiLate">0</p></article>
+        <article class="card kpi"><h3>Rad etilgan</h3><p id="kpiRejected">0</p></article>
+      </section>
+
+      <section class="card map-panel">
+        <h2>Murojaatlar xaritasi (vizual jadval)</h2>
+        <p class="muted">Hudud bo'yicha murojaatlar soni</p>
+        <div id="regionBars" class="region-bars"></div>
+      </section>
+
+      <section class="card chart-panel">
+        <h2>Xizmat ko'rsatish sifati trendi</h2>
+        <canvas id="ratingChart" height="140"></canvas>
+      </section>
+
+      <section class="card chart-wide">
+        <h2>Yo'nalishlar bo'yicha tahlil</h2>
+        <canvas id="categoryChart" height="120"></canvas>
+      </section>
+    </main>
+  </body>
+</html>
